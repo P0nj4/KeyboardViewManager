@@ -12,6 +12,8 @@
 		441B62541C3ECF3900C75752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441B62521C3ECF3900C75752 /* Main.storyboard */; };
 		441B62561C3ECF3900C75752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441B62551C3ECF3900C75752 /* Assets.xcassets */; };
 		441B62591C3ECF3900C75752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441B62571C3ECF3900C75752 /* LaunchScreen.storyboard */; };
+		441B626E1C3ED3A400C75752 /* KeyboardManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441B626B1C3ED3A400C75752 /* KeyboardManagerViewController.m */; };
+		441B626F1C3ED3A400C75752 /* UIViewController+KeyboardManagment.m in Sources */ = {isa = PBXBuildFile; fileRef = 441B626D1C3ED3A400C75752 /* UIViewController+KeyboardManagment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		441B62551C3ECF3900C75752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441B62581C3ECF3900C75752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441B625A1C3ECF3900C75752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		441B626A1C3ED3A400C75752 /* KeyboardManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManagerViewController.h; sourceTree = "<group>"; };
+		441B626B1C3ED3A400C75752 /* KeyboardManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardManagerViewController.m; sourceTree = "<group>"; };
+		441B626C1C3ED3A400C75752 /* UIViewController+KeyboardManagment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardManagment.h"; sourceTree = "<group>"; };
+		441B626D1C3ED3A400C75752 /* UIViewController+KeyboardManagment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardManagment.m"; sourceTree = "<group>"; };
+		441B62741C3ED49700C75752 /* KeyboardViewManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeyboardViewManager-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +61,27 @@
 		441B624D1C3ECF3900C75752 /* KeyboardViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				441B62691C3ED3A400C75752 /* KeyboardManager */,
 				441B624E1C3ECF3900C75752 /* AppDelegate.swift */,
 				441B62501C3ECF3900C75752 /* ViewController.swift */,
 				441B62521C3ECF3900C75752 /* Main.storyboard */,
 				441B62551C3ECF3900C75752 /* Assets.xcassets */,
 				441B62571C3ECF3900C75752 /* LaunchScreen.storyboard */,
 				441B625A1C3ECF3900C75752 /* Info.plist */,
+				441B62741C3ED49700C75752 /* KeyboardViewManager-Bridging-Header.h */,
 			);
 			path = KeyboardViewManager;
+			sourceTree = "<group>";
+		};
+		441B62691C3ED3A400C75752 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				441B626A1C3ED3A400C75752 /* KeyboardManagerViewController.h */,
+				441B626B1C3ED3A400C75752 /* KeyboardManagerViewController.m */,
+				441B626C1C3ED3A400C75752 /* UIViewController+KeyboardManagment.h */,
+				441B626D1C3ED3A400C75752 /* UIViewController+KeyboardManagment.m */,
+			);
+			path = KeyboardManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				441B626F1C3ED3A400C75752 /* UIViewController+KeyboardManagment.m in Sources */,
 				441B62511C3ECF3900C75752 /* ViewController.swift in Sources */,
+				441B626E1C3ED3A400C75752 /* KeyboardManagerViewController.m in Sources */,
 				441B624F1C3ECF3900C75752 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +275,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GermanPereyra.KeyboardViewManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KeyboardViewManager/KeyboardViewManager-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -264,6 +287,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GermanPereyra.KeyboardViewManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KeyboardViewManager/KeyboardViewManager-Bridging-Header.h";
 			};
 			name = Release;
 		};

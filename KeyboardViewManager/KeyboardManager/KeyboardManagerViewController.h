@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface KeyboardManagerViewController : UIViewController
-
+@property (nonatomic) float textFieldMaxY;
 @end

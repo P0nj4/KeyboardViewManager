@@ -9,7 +9,7 @@
 #import "KeyboardManagerViewController.h"
 #import "UIViewController+KeyboardManagment.h"
 
-@interface KeyboardManagerViewController ()
+@interface KeyboardManagerViewController () <UITextFieldDelegate>
 
 @end
 
@@ -33,4 +33,18 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    self.textFieldMaxY = [self textFieldPosition:textField] + textField.frame.size.height;
+    return YES;
+}
+
+- (CGFloat)textFieldPosition:(UIView *)view {
+    if (view == self.view) {
+        return 0;
+    } else {
+        return [self textFieldPosition:view.superview] + view.frame.origin.y;
+    }
+}
+
 @end
